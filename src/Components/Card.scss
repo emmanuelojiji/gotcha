@@ -1,0 +1,42 @@
+.card {
+  height: 610px;
+  max-width: 405.74px;
+  width: 100%;
+  background: white;
+  padding: 5px;
+  border: solid 3px black;
+
+  .header {
+    background: #488fe1;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 3px black;
+    color: white;
+    padding-left: 30px;
+    margin-bottom: 5px;
+
+    h2{
+        font-size: 30px;
+        margin-top: 5px;
+    }
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-container {
+  img {
+    object-fit: cover;
+    height: 94.16px;
+    width: 94.16px;
+    border: solid 3px black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+}
