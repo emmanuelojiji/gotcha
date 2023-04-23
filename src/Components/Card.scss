@@ -5,6 +5,7 @@
   background: white;
   padding: 5px;
   border: solid 3px black;
+  grid-area: 1 / 1 / 2 / 2;
 
   .header {
     background: #488fe1;
@@ -17,9 +18,9 @@
     padding-left: 30px;
     margin-bottom: 5px;
 
-    h2{
-        font-size: 30px;
-        margin-top: 5px;
+    h2 {
+      font-size: 30px;
+      margin-top: 5px;
     }
   }
 }
@@ -38,5 +39,23 @@
     border: solid 3px black;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+  }
+}
+
+.fall {
+  animation: fall 1s forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
   }
 }

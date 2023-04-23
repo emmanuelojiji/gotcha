@@ -107,7 +107,7 @@ export const questionOne = [
   {
     name: "Rihanna",
     src: rihanna,
-    correct: false,
+    correct: true,
     active: true,
   },
 

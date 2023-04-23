@@ -1,16 +1,14 @@
 import "./Card.scss";
 
-const Card = ({ children }) => {
+const Card = ({ children, questionOneState, fallAnimation, heading }) => {
   return (
-    <div className="card">
+    <div className={`card ${fallAnimation}`}>
       <div className="header">
         <p>Select 3 squares with</p>
-        <h2>Grammy Winners</h2>
+        <h2>{heading}</h2>
       </div>
 
-      <div className="grid-container">
-        {children}
-      </div>
+      <div className="grid-container">{children}</div>
     </div>
   );
 };
