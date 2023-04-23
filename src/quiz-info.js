@@ -124,3 +124,5 @@ export const questionOne = [
     active: true,
   },
 ];
+
+export const questionTwo = ["hey", "hi", "hey", "hi", "hi", "hey", "hi", "hi", "hey", "hi", "hi", "hey", "hi", "hi", "hey", "hi"]

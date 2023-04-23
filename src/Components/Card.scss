@@ -1,11 +1,12 @@
 .card {
-  height: 610px;
   max-width: 405.74px;
   width: 100%;
   background: white;
   padding: 5px;
   border: solid 3px black;
   grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
 
   .header {
     background: #488fe1;
@@ -32,6 +33,7 @@
 }
 
 .image-container {
+  position: relative;
   img {
     object-fit: cover;
     height: 94.16px;
@@ -39,11 +41,25 @@
     border: solid 3px black;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 }
 
+button {
+  align-self: flex-end;
+  height: 45px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #488fe1;
+  color: white;
+  border: solid 3px black;
+}
+
 .fall {
-  animation: fall 1s forwards;
+  animation: fall 0.8s forwards;
 }
 
 @keyframes fall {
@@ -57,5 +73,47 @@
     transform: translateY(100%);
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+.star {
+  position: absolute;
+  color: rgb(214, 164, 0);
+  z-index: 300;
+  opacity: 0;
+  font-size: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.star-1 {
+  animation: sparkle 2.5s forwards;
+}
+
+.star-2 {
+  top: 70px;
+  left: 10px;
+  animation: zoom 3s;
+  animation: sparkle 2.5s forwards;
+  animation-delay: 0.2s;
+}
+
+.star-3 {
+  top: 50px;
+  right: 10px;
+  animation: sparkle 2.5s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes sparkle {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1);
   }
 }

@@ -9,6 +9,8 @@ const Card = ({ children, questionOneState, fallAnimation, heading }) => {
       </div>
 
       <div className="grid-container">{children}</div>
+
+      <button>Skip</button>
     </div>
   );
 };
