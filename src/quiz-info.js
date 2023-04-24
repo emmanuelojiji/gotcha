@@ -1,19 +1,19 @@
-import beyonce from "./Media/beyonce.webp";
-import kanye_west from "./Media/kanye_west.webp";
-import diana_ross from "./Media/diana_ross.jpg";
-import abba from "./Media/abba.jpg";
-import sia from "./Media/sia.webp";
-import snoop_dogg from "./Media/snoop_dogg.jpeg";
-import miley_cyrus from "./Media/miley_cyrus.jpeg";
-import katy_perry from "./Media/katy_perry.jpeg";
-import the_weeknd from "./Media/the_weeknd.webp";
-import bruno_mars from "./Media/bruno_mars.jpeg";
-import nicki_minaj from "./Media/nicki_minaj.jpeg";
-import burna_boy from "./Media/burna_boy.png";
-import wizkid from "./Media/wizkid.jpeg";
-import rihanna from "./Media/rihanna.webp";
-import tupac from "./Media/tupac.webp";
-import giveon from "./Media/giveon.webp";
+import beyonce from "./Media/question-1/beyonce.webp";
+import kanye_west from "./Media/question-1/kanye_west.webp";
+import diana_ross from "./Media/question-1/diana_ross.jpg";
+import abba from "./Media/question-1/abba.jpg";
+import sia from "./Media/question-1/sia.webp";
+import snoop_dogg from "./Media/question-1/snoop_dogg.jpeg";
+import miley_cyrus from "./Media/question-1/miley_cyrus.jpeg";
+import katy_perry from "./Media/question-1/katy_perry.jpeg";
+import the_weeknd from "./Media/question-1/the_weeknd.webp";
+import bruno_mars from "./Media/question-1/bruno_mars.jpeg";
+import nicki_minaj from "./Media/question-1/nicki_minaj.jpeg";
+import burna_boy from "./Media/question-1/burna_boy.png";
+import wizkid from "./Media/question-1/wizkid.jpeg";
+import rihanna from "./Media/question-1/rihanna.webp";
+import tupac from "./Media/question-1/tupac.webp";
+import giveon from "./Media/question-1/giveon.webp";
 
 export const questionOne = [
   {

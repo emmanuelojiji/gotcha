@@ -2,10 +2,14 @@ import "./App.scss";
 import Card from "./Components/Card";
 import { questionOne, questionTwo } from "./quiz-info";
 import { useState } from "react";
+import pop from "./Media/Audio/pop.mp3";
+import chime from "./Media/Audio/chime.wav";
 
 function App() {
   const [questionOneState, setQuestionOneState] = useState(questionOne);
   const [questionTwoState, setQuestionTwoState] = useState(questionTwo);
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const [gameOver, setGameOver] = useState(false);
 
@@ -21,6 +25,16 @@ function App() {
     });
 
     console.log(questionOneState);
+  };
+
+  const playPop = () => {
+    const audio = new Audio(pop);
+    audio.play();
+  };
+
+  const playChime = () => {
+    const audio = new Audio(chime);
+    audio.play();
   };
 
   return (
@@ -61,6 +75,7 @@ function App() {
                     <div className="star star-1">✦</div>
                     <div className="star star-2">✦</div>
                     <div className="star star-3">✦</div>
+                    <div className="star star-4">✦</div>
                   </div>
                 )}
                 <img
@@ -70,7 +85,11 @@ function App() {
                   }}
                   onClick={() => {
                     handleImageClick(index, image.correct);
+                    if (image.correct) {
+                      playChime();
+                    }
                   }}
+                  onMouseEnter={playPop}
                 />
               </div>
             ))}

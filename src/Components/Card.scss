@@ -33,7 +33,7 @@
 }
 
 .image-container {
-  position: relative;
+
   img {
     object-fit: cover;
     height: 94.16px;
@@ -79,7 +79,7 @@ button {
 .star {
   position: absolute;
   color: rgb(214, 164, 0);
-  z-index: 300;
+
   opacity: 0;
   font-size: 30px;
   transition: 0.2s ease-in-out;
@@ -90,19 +90,33 @@ button {
 }
 
 .star-2 {
-  top: 70px;
-  left: 10px;
   animation: zoom 3s;
   animation: sparkle 2.5s forwards;
   animation-delay: 0.2s;
+  left: 50px;
+  bottom: 300px;
+ 
+}
+
+.test{
+    position: relative;
 }
 
 .star-3 {
-  top: 50px;
-  right: 10px;
+ 
   animation: sparkle 2.5s forwards;
   animation-delay: 0.3s;
+  right: 50px;
+  top: 200px;
 }
+
+.star-4 {
+ 
+    animation: sparkle 2.5s forwards;
+    animation-delay: 0.3s;
+    right: 300px;
+    bottom: 100px;
+  }
 
 @keyframes sparkle {
   0% {
