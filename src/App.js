@@ -9,16 +9,18 @@ function App() {
   const [questionOneState, setQuestionOneState] = useState(questionOne);
   const [questionTwoState, setQuestionTwoState] = useState(questionTwo);
 
+  const [lives, setLives] = useState(false);
+
   const [isHovered, setIsHovered] = useState(false);
 
   const [gameOver, setGameOver] = useState(false);
 
-  const handleImageClick = (index, image) => {
+  const handleImageClick = (index, image, setQuestionState) => {
     if (image === false) {
       setGameOver(true);
     }
 
-    setQuestionOneState((prevState) => {
+    setQuestionState((prevState) => {
       const newState = [...prevState];
       newState[index].active = false;
       return newState;
@@ -42,21 +44,33 @@ function App() {
       {!gameOver && (
         <div className="card-container">
           <Card
-            heading="Question 2"
+            heading="Margot Robbie"
             fallAnimation={`${
               questionTwoState.filter((obj) => obj.active === false).length >
                 2 && "fall"
             }`}
             children={questionTwoState.map((image, index) => (
               <div className="image-container" key={image.name}>
+                {!image.active && (
+                  <div className="star-container">
+                    <div className="star star-1">✦</div>
+                    <div className="star star-2">✦</div>
+                    <div className="star star-3">✦</div>
+                    <div className="star star-4">✦</div>
+                  </div>
+                )}
                 <img
                   src={image.src}
                   style={{
                     opacity: !image.active && image.correct ? "0" : "1",
                   }}
                   onClick={() => {
-                    handleImageClick(index, image.correct);
+                    handleImageClick(index, image.correct, setQuestionTwoState);
+                    if (image.correct) {
+                      playChime();
+                    }
                   }}
+                  onMouseEnter={playPop}
                 />
               </div>
             ))}
@@ -84,7 +98,7 @@ function App() {
                     opacity: !image.active && image.correct ? "0" : "1",
                   }}
                   onClick={() => {
-                    handleImageClick(index, image.correct);
+                    handleImageClick(index, image.correct, setQuestionOneState);
                     if (image.correct) {
                       playChime();
                     }
