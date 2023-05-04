@@ -27,7 +27,7 @@ import samara_3 from "./Media/question-2/samara-3.jpg";
 import samara_4 from "./Media/question-2/samara-4.jpg";
 import samara_5 from "./Media/question-2/samara-5.webp";
 import emma_1 from "./Media/question-2/emma-1.jpg";
-import emma_2 from "./Media/question-2/emma-2.avif";
+import emma_2 from "./Media/question-2/emma-2.png";
 import emma_3 from "./Media/question-2/emma-3.jpg";
 import emma_4 from "./Media/question-2/emma-4.jpg";
 import emma_5 from "./Media/question-2/emma-5.jpg";

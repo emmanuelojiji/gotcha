@@ -57,7 +57,7 @@ function App() {
                 2 && "fall"
             }`}
             children={questionTwoState.map((image, index) => (
-              <div className="image-container" key={image.name}>
+              <>
                 {!image.active && (
                   <div className="star-container">
                     <div className="star star-1">✦</div>
@@ -67,6 +67,7 @@ function App() {
                   </div>
                 )}
                 <img
+                  className="grid-image"
                   src={image.src}
                   style={{
                     opacity: !image.active && image.correct ? "0" : "1",
@@ -79,7 +80,7 @@ function App() {
                   }}
                   onMouseEnter={playPop}
                 />
-              </div>
+              </>
             ))}
           />
 
@@ -90,7 +91,7 @@ function App() {
                 2 && "fall"
             }`}
             children={questionOneState.map((image, index) => (
-              <div className="image-container" key={image.name}>
+              <>
                 {!image.active && (
                   <div className="star-container">
                     <div className="star star-1">✦</div>
@@ -100,6 +101,7 @@ function App() {
                   </div>
                 )}
                 <img
+                  className="grid-image"
                   src={image.src}
                   style={{
                     opacity: !image.active && image.correct ? "0" : "1",
@@ -112,7 +114,7 @@ function App() {
                   }}
                   onMouseEnter={playPop}
                 />
-              </div>
+              </>
             ))}
           />
         </div>
