@@ -3,7 +3,7 @@
   background: #64e3ff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .card-container {
@@ -13,9 +13,31 @@
   -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
 
-
   display: grid;
   display: grid;
-  grid-template-columns:  1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.game-over {
+  text-align: center;
+  font-size: 80px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "ArcadeClassic";
+  opacity: 0;
+  animation: game-over 0.3s linear forwards;
+}
+
+@keyframes game-over {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

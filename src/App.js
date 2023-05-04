@@ -4,27 +4,28 @@ import { questionOne, questionTwo } from "./quiz-info";
 import { useState } from "react";
 import pop from "./Media/Audio/pop.mp3";
 import chime from "./Media/Audio/chime.wav";
+import fail from "./Media/Audio/fail.wav";
+import Header from "./Components/Header";
 
 function App() {
   const [questionOneState, setQuestionOneState] = useState(questionOne);
   const [questionTwoState, setQuestionTwoState] = useState(questionTwo);
 
-  const [lives, setLives] = useState(false);
-
-  const [isHovered, setIsHovered] = useState(false);
-
+  const [lives, setLives] = useState(3);
   const [gameOver, setGameOver] = useState(false);
 
   const handleImageClick = (index, image, setQuestionState) => {
     if (image === false) {
-      setGameOver(true);
+      setLives(lives - 1);
+      playFail();
+      lives === 1 && setGameOver(true);
+    } else if (image === true) {
+      setQuestionState((prevState) => {
+        const newState = [...prevState];
+        newState[index].active = false;
+        return newState;
+      });
     }
-
-    setQuestionState((prevState) => {
-      const newState = [...prevState];
-      newState[index].active = false;
-      return newState;
-    });
 
     console.log(questionOneState);
   };
@@ -39,9 +40,15 @@ function App() {
     audio.play();
   };
 
+  const playFail = () => {
+    const audio = new Audio(fail);
+    audio.play();
+  };
+
   return (
     <div className="App">
-      {!gameOver && (
+      <Header lives={lives} />
+      {!gameOver ? (
         <div className="card-container">
           <Card
             heading="Margot Robbie"
@@ -109,6 +116,12 @@ function App() {
             ))}
           />
         </div>
+      ) : (
+        <h1 className="game-over">
+          GAME
+          <br />
+          OVER
+        </h1>
       )}
     </div>
   );

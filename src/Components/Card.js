@@ -1,5 +1,6 @@
 import "./Card.scss";
 
+
 const Card = ({ children, questionOneState, fallAnimation, heading }) => {
   return (
     <div className={`card ${fallAnimation}`}>
