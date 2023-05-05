@@ -129,8 +129,8 @@ function App() {
             />
           </div>
           <div className="console-button-container">
-          <div className="console-button oval"></div>
-          <div className="console-button oval"></div>
+            <div className="console-button oval"></div>
+            <div className="console-button oval"></div>
 
             <div className="console-button round"></div>
             <div className="console-button round"></div>
