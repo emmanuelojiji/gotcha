@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: solid 3px black;
+    border: solid 5px black;
     color: white;
     padding-left: 30px;
     margin-bottom: 5px;
@@ -39,7 +39,6 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
   gap: 10px;
 }
 
@@ -47,7 +46,7 @@
   object-fit: cover;
   max-height: 100%;
   max-width: 100%;
-  border: solid 3px black;
+  border: solid 5px black;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 

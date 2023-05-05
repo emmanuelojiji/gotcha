@@ -11,7 +11,7 @@ const Card = ({ children, questionOneState, fallAnimation, heading }) => {
 
       <div className="grid-container">{children}</div>
 
-      <button>Skip</button>
+    
     </div>
   );
 };

@@ -49,74 +49,92 @@ function App() {
     <div className="App">
       <Header lives={lives} />
       {!gameOver ? (
-        <div className="card-container">
-          <Card
-            heading="Margot Robbie"
-            fallAnimation={`${
-              questionTwoState.filter((obj) => obj.active === false).length >
-                2 && "fall"
-            }`}
-            children={questionTwoState.map((image, index) => (
-              <>
-                {!image.active && (
-                  <div className="star-container">
-                    <div className="star star-1">✦</div>
-                    <div className="star star-2">✦</div>
-                    <div className="star star-3">✦</div>
-                    <div className="star star-4">✦</div>
-                  </div>
-                )}
-                <img
-                  className="grid-image"
-                  src={image.src}
-                  style={{
-                    opacity: !image.active && image.correct ? "0" : "1",
-                  }}
-                  onClick={() => {
-                    handleImageClick(index, image.correct, setQuestionTwoState);
-                    if (image.correct) {
-                      playChime();
-                    }
-                  }}
-                  onMouseEnter={playPop}
-                />
-              </>
-            ))}
-          />
+        <div className="console">
+          <h3 className="console-name">GOTCHA</h3>
+          <div className="card-container">
+            <Card
+              heading="Margot Robbie"
+              fallAnimation={`${
+                questionTwoState.filter((obj) => obj.active === false).length >
+                  2 && "fall"
+              }`}
+              children={questionTwoState.map((image, index) => (
+                <>
+                  {!image.active && (
+                    <div className="star-container">
+                      <div className="star star-1">✦</div>
+                      <div className="star star-2">✦</div>
+                      <div className="star star-3">✦</div>
+                      <div className="star star-4">✦</div>
+                    </div>
+                  )}
+                  <img
+                    className="grid-image"
+                    src={image.src}
+                    style={{
+                      opacity: !image.active && image.correct ? "0" : "1",
+                    }}
+                    onClick={() => {
+                      handleImageClick(
+                        index,
+                        image.correct,
+                        setQuestionTwoState
+                      );
+                      if (image.correct) {
+                        playChime();
+                      }
+                    }}
+                    onMouseEnter={playPop}
+                  />
+                </>
+              ))}
+            />
 
-          <Card
-            heading="Grammy Winners"
-            fallAnimation={`${
-              questionOneState.filter((obj) => obj.active === false).length >
-                2 && "fall"
-            }`}
-            children={questionOneState.map((image, index) => (
-              <>
-                {!image.active && (
-                  <div className="star-container">
-                    <div className="star star-1">✦</div>
-                    <div className="star star-2">✦</div>
-                    <div className="star star-3">✦</div>
-                    <div className="star star-4">✦</div>
-                  </div>
-                )}
-                <img
-                  className="grid-image"
-                  src={image.src}
-                  style={{
-                    opacity: !image.active && image.correct ? "0" : "1",
-                  }}
-                  onClick={() => {
-                    handleImageClick(index, image.correct, setQuestionOneState);
-                    if (image.correct) {
-                      playChime();
-                    }
-                  }}
-                  onMouseEnter={playPop}
-                />
-              </>
-            ))}
-          />
+            <Card
+              heading="Grammy Winners"
+              fallAnimation={`${
+                questionOneState.filter((obj) => obj.active === false).length >
+                  2 && "fall"
+              }`}
+              children={questionOneState.map((image, index) => (
+                <>
+                  {!image.active && (
+                    <div className="star-container">
+                      <div className="star star-1">✦</div>
+                      <div className="star star-2">✦</div>
+                      <div className="star star-3">✦</div>
+                      <div className="star star-4">✦</div>
+                    </div>
+                  )}
+                  <img
+                    className="grid-image"
+                    src={image.src}
+                    style={{
+                      opacity: !image.active && image.correct ? "0" : "1",
+                    }}
+                    onClick={() => {
+                      handleImageClick(
+                        index,
+                        image.correct,
+                        setQuestionOneState
+                      );
+                      if (image.correct) {
+                        playChime();
+                      }
+                    }}
+                    onMouseEnter={playPop}
+                  />
+                </>
+              ))}
+            />
+          </div>
+          <div className="console-button-container">
+          <div className="console-button oval"></div>
+          <div className="console-button oval"></div>
+
+            <div className="console-button round"></div>
+            <div className="console-button round"></div>
+          </div>
         </div>
       ) : (
         <h1 className="game-over">
