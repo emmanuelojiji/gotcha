@@ -1,11 +1,16 @@
 .App {
   height: 100vh;
-  background: #64e3ff;
+  background: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  padding-left: 7%;
+  padding-left: 10%;
   padding-right: 10%;
+
+  @media only screen and (max-width: 593px) {
+   padding: 0;
+  }
 }
 
 .card-container {
@@ -43,7 +48,7 @@
 }
 
 .console {
-  background: #3c3c3c;
+  background: #44fe9b;
   border: solid 10px black;
   display: flex;
   flex-direction: column;
@@ -53,14 +58,20 @@
   color: white;
   padding-left: 50px;
   padding-right: 50px;
+
+  @media only screen and (max-width: 593px) {
+    height: 100vh;
+    border-radius: 0;
+  }
+  
 }
 
 .console-name {
   font-family: "ArcadeClassic";
   font-size: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: rgb(121, 121, 121);
+
+  color: #14bd63;
+  padding: 30px;
 }
 
 .console-button-container {

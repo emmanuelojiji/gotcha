@@ -5,6 +5,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding-right: 2%;
+    display: none;
 
     &:empty{
         display: none;
